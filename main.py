@@ -9,3 +9,21 @@ class Asiento:
             self.color = color
         else:
             pass
+
+class Auto:
+    cantidadCreados = 0
+    def __init__(self, modelo, precio, asientos,marca,motor,registro):
+        self.modelo = modelo
+        self.precio = precio
+        self.asientos = asientos
+        self.marca = marca
+        self.motor = motor
+        self.registro = registro
+        Auto.cantidadCreados += 1
+    
+    def cantidadAsientos(self):
+        cantidad = 0
+        for asiento in self.asientos:
+            if isinstance(asiento, Asiento):
+                cantidad += 1
+        return cantidad
