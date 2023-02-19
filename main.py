@@ -37,3 +37,16 @@ class Auto:
             return "Auto original"
         else:
             return "Las piezas no son originales"
+
+class Motor:
+    def __init__(self, numeroCilindros, tipo, registro):
+        self.numeroCilindros = numeroCilindros
+        self.tipo = tipo
+        self.registro = registro
+
+    def cambiarRegistro(self, registro):
+        self.registro = registro
+
+    def asignarTipo(self, tipo):
+        if tipo in ["electrico","gasolina"]:
+            self.tipo = tipo
